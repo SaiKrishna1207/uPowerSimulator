@@ -59,11 +59,12 @@ void initialize()
             instr_typ_ds(bin_lines[CIA].instr);
         }
 
-        CIA += displacement;
         if (ch == 'y')
         {
             display_registers();
         }
+        CIA += displacement;
+        NIA = CIA + 1;
     }
     return;
 }
